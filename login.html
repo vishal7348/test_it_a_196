@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #button {
+           background-color: rgb(139, 252, 139);
+           
+       }
+       button:hover{
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <h2 align="center">Login</h2>
+    <table border="1" align="center">
+        <tr>
+            <td>
+                <input type="text" id="user" placeholder="Username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="password" id="pass" placeholder="Password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" id="button" align="center">LOGIN</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+document.getElementById("button").addEventListener("click", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
+
+    if (validateLogin(username, password)) {
+        window.location.href = "dash.html";
+    } else {
+        alert("Please enter both username and password");
+    }
+});
+
+function validateLogin(username, password) {
+    return username === "admin" && password === "admin";
+}
+</script>
+</html>

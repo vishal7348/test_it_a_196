@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        #button2 {
+            background-color: rgb(139, 252, 139);
+        }
+        #button3 {
+            background-color: red;
+        }
+        .dropdown {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        h1{
+            background-color: blanchedalmond;
+        }
+        #d{
+            display: flex;
+        }
+        button2:hover{
+        cursor: pointer;
+       }
+       button3:hover{
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <h1 align="center">DASHBOARD</h1>
+    <h3 align="center">WELCOME VISHAL</h3>
+    <div>
+        <button onclick="fetchData()" id="button2" align="center">Fetch Top 10 GitHub Users</button>
+    </div>
+    <div id="d">
+        <label for="sortOptions"></label>
+        <select id="sortOptions" onchange="sortUsers()">
+            <option value="default">Default</option>
+            <option value="alphabetical">Alphabetical</option>
+        </select>
+    </div>
+    
+
+    <footer>
+        <button id="button3" onclick="logout()">Logout</button>
+    </footer>
+
+
+</body>
+<script src="dash.js"></script>
+</html>
